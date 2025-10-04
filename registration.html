@@ -1,15 +1,94 @@
-<!-- Porsche Booking Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Your Porsche</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #2c2c2c;
+      color: #fff;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #e60000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff1a1a;
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #e60000;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      text-align: left;
+      font-weight: bold;
+    }
+    input, select {
+      padding: 0.6rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .btn {
+      background-color: #e60000;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #ff1a1a;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="register">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="registration.html">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <section>
     <h1>Book Your Porsche Experience</h1>
     <form>
       <label for="name">Full Name:</label>
@@ -19,22 +98,4 @@
       <input type="email" id="email" name="email" required />
 
       <label for="model">Preferred Model:</label>
-      <select id="model" name="model">
-        <option value="911">911 Carrera</option>
-        <option value="taycan">Taycan</option>
-        <option value="macan">Macan</option>
-      </select>
-
-      <label for="date">Test Drive Date:</label>
-      <input type="date" id="date" name="date" required />
-
-      <button class="btn" type="submit">Submit</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 Porsche Experience. Designed by Prateek.
-  </footer>
-
-</body>
-</html>
+      [43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/kooks7/kooks7.github.io/tree/eeaef025be0a14390ef9fa7212bde6e9a95c5465/_posts%2F2020-06-23-%5BTypeScript%5D-TypeScript-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/lzh-yi/Web-Fork-/tree/024b3e55587afdf9f05a677613a75f24e3d1803e/03-CSS%E8%BF%9B%E9%98%B6%2F04-%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%EF%BC%9F.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "2")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/upperlinecode/CS-and-the-City-Curriculum/tree/681355db9b3f14574925f0344f873298157fe457/react%2Flaunch-worksheet-html.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "3")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/toshiro-en-miyamoto/responsive/tree/4a400cc47b355d1c755114fafab8d4e583e0275c/HTML5%2F4-4_Grouping.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "4")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/fixmysync/JuliaIvan-Wedding/tree/ec454cced9bc669aeb5420697748dab38758eb34/contact.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "5")<select id="model"
