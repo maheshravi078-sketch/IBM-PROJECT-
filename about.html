@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Porsche</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #2c2c2c;
-      color: #fff;
-    }
-    nav {
-      background-color: #1a1a1a;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
-      color: #e60000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #ff1a1a;
-    }
-    section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #e60000;
-    }
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 1rem auto 2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mercedes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>:root { --gold-color: #CFAF6F; }</style>
 </head>
-<body>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+  <header id="header" class="sticky top-0 bg-white/80 backdrop-blur-md shadow-md z-50"></header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="registration.html">Book Now</a></li>
-    </ul>
-  </nav>
+  <main class="flex-grow container mx-auto px-6 py-20">
+    <h1 class="text-4xl font-bold mb-6 text-center">About Mercedes Feedback & Booking</h1>
+    <p class="max-w-3xl mx-auto text-center text-lg text-gray-700 mb-12">
+      Mercedes-Benz is a global leader in luxury vehicles. This platform allows customers to book test drives, leave feedback, and interact with AI-powered tools.
+    </p>
 
-  <section>
-    <h1>About Porsche</h1>
-    <p>Porsche has redefined automotive excellence for over 75 years. From the iconic 911 to the groundbreaking Taycan, our legacy is built on innovation, performance, and timeless design.</p>
-    <img src="porsche-heritage.jpg" alt="Porsche Heritage" />
-  </section>
+    <!-- Chatbot -->
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-xl mb-10">
+      <h2 class="text-2xl font-bold mb-4">Mercedes Virtual Assistant</h2>
+      <div id="chat-window" class="border rounded-md p-4 h-80 overflow-y-auto bg-gray-50 mb-4"></div>
+      <input id="user-input" type="text" placeholder="Ask me anything..." class="w-full border p-3 rounded-md" />
+      <button onclick="sendMessage()" class="bg-[var(--gold-color)] text-white px-6 py-3 rounded-full mt-2">Send</button>
+    </div>
 
-  <footer>
-    &copy; 2025 Porsche Experience. Designed by Prateek.
-  </footer>
+    <!-- NLP -->
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+      <h2 class="text-2xl font-bold mb-4">Text Analysis (NLP)</h2>
+      <textarea id="nlp-text" class="w-full border p-3 rounded-md mb-4" rows="5" placeholder="Paste text for analysis..."></textarea>
+      <button class="bg-[var(--gold-color)] text-white px-6 py-3 rounded-full">Analyze</button>
+    </div>
+  </main>
 
+  <footer id="footer" class="bg-gray-900 text-white py-10 mt-auto"></footer>
+  <script src="nav.js"></script>
+
+  <script>
+    const chatWindow = document.getElementById("chat-window");
+
+    function sendMessage() {
+      const input = document.getElementById("user-input");
+      const userText = input.value.trim();
+      if (!userText) return;
+
+      appendMessage("You", userText);
+      input.value = "";
+
+      let botReply = "I'm here to help with Mercedes feedback and booking.";
+      if (userText.toLowerCase().includes("book")) {
+        botReply = "Sure! You can book a test drive on our Home page.";
+      } else if (userText.toLowerCase().includes("feedback")) {
+        botReply = "We value your feedback. Please share your thoughts!";
+      } else if (userText.toLowerCase().includes("hello") || userText.toLowerCase().includes("hi")) {
+        botReply = "Hello! How can I assist you today?";
+      }
+
+      setTimeout(() => appendMessage("Bot", botReply), 500);
+    }
+
+    function appendMessage(sender, text) {
+      const msg = document.createElement("div");
+      msg.className = "mb-2";
+      msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+      chatWindow.appendChild(msg);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+  </script>
 </body>
 </html>
