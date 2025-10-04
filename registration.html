@@ -1,0 +1,40 @@
+<!-- Porsche Booking Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Porsche</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <section class="register">
+    <h1>Book Your Porsche Experience</h1>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="model">Preferred Model:</label>
+      <select id="model" name="model">
+        <option value="911">911 Carrera</option>
+        <option value="taycan">Taycan</option>
+        <option value="macan">Macan</option>
+      </select>
+
+      <label for="date">Test Drive Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Porsche Experience. Designed by Prateek.
+  </footer>
+
+</body>
+</html>
