@@ -1,15 +1,74 @@
-<!-- About Porsche Experience -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Porsche</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #2c2c2c;
+      color: #fff;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #e60000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff1a1a;
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #e60000;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 1rem auto 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="about">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="registration.html">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <section>
     <h1>About Porsche</h1>
     <p>Porsche has redefined automotive excellence for over 75 years. From the iconic 911 to the groundbreaking Taycan, our legacy is built on innovation, performance, and timeless design.</p>
     <img src="porsche-heritage.jpg" alt="Porsche Heritage" />
